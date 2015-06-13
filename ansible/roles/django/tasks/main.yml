@@ -1,0 +1,9 @@
+---
+- name: Create /virtualenvs
+  file: dest=/virtualenvs state=directory owner=vagrant group=vagrant
+
+- name: Install requirements into virtualenv
+  pip: 
+    requirements: "{{ project_root }}/requirements/project.txt"
+    virtualenv: /virtualenvs/pythonkc
+    virtualenv_command: python3 /usr/lib/python3/dist-packages/virtualenv.py -p python3

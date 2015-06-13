@@ -11,4 +11,6 @@
   roles:
     - role: base
       tags: base_role
+    - role: django
+      tags: django_role
   
